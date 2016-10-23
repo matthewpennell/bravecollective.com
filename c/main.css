@@ -1,0 +1,327 @@
+/**
+ * Brave Collective homepage
+ *
+ * Author: Shei Bushaava
+ * Created: 2016-10-08
+ */
+
+body {
+    background: #000 url(../i/bg.jpg);
+    color: #fff;
+    font: 14px/20px 'Open Sans', Helvetica, Arial, sans-serif;
+    padding-top: 100vh;
+}
+
+h2 {
+    color: #69d9ff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    h2 {
+        margin: 40px 0 10px;
+    }
+    .brave-info p {
+        margin: 0 0 40px;
+    }
+}
+
+/* NAV */
+
+.nav-logo {
+    left: 50%;
+    margin-left: -81px;
+    position: absolute;
+    top: 15px;
+    width: 162px;
+    height: 141px;
+    transition: linear all 0.2s;
+}
+
+.navbar-short .nav-logo {
+    width: 81px;
+    height: 70px;
+    margin-left: -41px;
+    top: -10px;
+}
+
+.brave-nav {
+    background: transparent;
+    border-bottom: 0;
+    transition: linear all 0.2s;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .brave-nav {
+        height: 100px;
+        padding-top: 68px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .brave-nav {
+        padding-top: 15px;
+    }
+    .nav-logo {
+        left: 15px;
+        top: 15px;
+        margin: 0;
+    }
+    .brave-nav .navbar-nav,
+    .brave-nav .navbar-nav>li {
+        text-align: right;
+        float: none;
+    }
+    .brave-nav .navbar-nav>li {
+        padding: 10px 0;
+    }
+    .brave-nav .navbar-nav {
+        margin-right: -15px;
+    }
+    .brave-nav .nav>li>a {
+        background: #111;
+        display: inline;
+    }
+    .brave-nav.navbar-short {
+        display: none;
+        transition: linear all 0.4s;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .nav-logo {
+        display: none;
+    }
+    .navbar-header {
+        background: #111;
+    }
+    .brave-nav .navbar-collapse {
+        background: #111;
+        text-align: right;
+    }
+}
+
+.navbar-short {
+    padding-top: 0;
+    height: auto;
+    background: #000;
+    opacity: 0.8;
+    transition: linear all 0.2s;
+}
+
+.brave-nav .navbar-nav>li>a {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    transition: background linear 0.2s;
+    text-shadow: 0 1px 1px #000;
+}
+
+.brave-nav .navbar-nav>li>a:hover,
+.brave-nav .navbar-nav>li>a:focus {
+    background: #69d9ff;
+    color: #000;
+    transition: background linear 0.4s;
+    text-shadow: none;
+}
+
+#readmore {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+/* LAYOUT */
+
+.brave-strap {
+    font-weight: 700;
+    margin: -80px 0 140px;
+    text-shadow: 0 1px 1px #000;
+}
+
+@media (min-width: 1024px) {
+
+    .brave-content-2 .brave-img {
+        margin-top: -100px;
+    }
+
+    .brave-content-1 .brave-img,
+    .brave-content-4 .brave-info,
+    .brave-content-7 .brave-img {
+        margin-top: 20px;
+    }
+
+    .brave-content-4 {
+        margin-top: 40px;
+    }
+
+    .brave-content-2 .brave-info,
+    .brave-content-6 {
+        margin-top: 60px;
+    }
+
+    .brave-content-5,
+    .brave-content-7 {
+        margin-top: 80px;
+    }
+
+    .brave-content-3,
+    .brave-content-3 .brave-info,
+    .brave-content-5 .brave-info {
+        margin-top: 100px;
+    }
+
+    .brave-content-6 .brave-info {
+        margin-top: 140px;
+    }
+
+    .brave-star {
+        background: #fff;
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        margin: 0 10px 2px -15px;
+        display: inline-block;
+    }
+
+    .brave-star-right {
+        margin: 0 0 2px 10px;
+    }
+
+    .brave-line {
+        background: #fff;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .brave-line-h {
+        height: 1px;
+    }
+
+    .brave-line-v {
+        width: 1px;
+    }
+
+}
+
+/* IMAGES */
+
+.brave-video {
+    z-index: -100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+video, .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-overlay {
+    background-image: url(../i/video-overlay.png);
+    border-bottom: 10px solid #1a7aa2;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+.brave-img {
+    border: 1px solid #fff;
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 220px;
+}
+
+@media (max-width: 767px) {
+    .brave-video {
+        background: url('../i/video-cover.jpg') center center / cover no-repeat;
+    }
+    video {
+        display: none;
+    }
+    .mobile-logo {
+        display: block;
+        left: 50%;
+        margin: -71px 0 0 -81px;
+        position: absolute;
+        top: 50%;
+    }
+    .brave-img {
+        margin: 0 10px;
+    }
+}
+
+/* FOOTER */
+
+.brave-footer {
+    margin: 40px 0;
+    background: url(../i/ihub.png) no-repeat 100%;
+    min-height: 329px;
+}
+
+@media (min-width: 767px) {
+    .brave-footer {
+        margin: 180px 0 80px;
+    }
+}
+
+.join-brave {
+    background: #1a7aa2;
+    border: 5px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px auto;
+    padding: 20px 0;
+    text-shadow: 0 2px 2px #000;
+    text-transform: uppercase;
+}
+
+.join-brave:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #145c7a;
+    position: relative;
+    top: -2px;
+    box-shadow: 0 2px 2px #000;
+}
+
+.brave-conditions {
+    font-size: 12px;
+}
