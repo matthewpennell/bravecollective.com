@@ -9,7 +9,7 @@ $(window).scroll(function () {
 
 $('#readmore').on('click', function () {
     $('html, body').animate({
-        scrollTop: $('#content').offset().top
+        scrollTop: $('#content').offset().top - 100
     }, 1000);
     return false;
 });
