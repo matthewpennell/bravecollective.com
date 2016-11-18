@@ -337,4 +337,14 @@ video, .video-overlay {
 
 .brave-conditions {
     font-size: 12px;
+    margin: 20px 0;
+}
+
+.brave-conditions a {
+    color: #69d9ff;
+    text-decoration: underline;
+}
+
+.brave-conditions a:hover, .brave-conditions a:focus {
+    color: #fff;
 }
