@@ -1,2 +1,2 @@
 # bravecollective.com
-Homepage for Brave Collective
+Homepage for EVE Online's Brave Collective alliance: [bravecollective.com](http://www.bravecollective.com/)
